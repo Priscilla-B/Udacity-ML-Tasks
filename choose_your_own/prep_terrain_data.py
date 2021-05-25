@@ -28,7 +28,7 @@ def makeTerrainData(n_points=1000):
     bumpy_bkg = [X_train[ii][1] for ii in range(0, len(X_train)) if y_train[ii] == 1]
 
     training_data = {"fast": {"grade": grade_sig, "bumpiness": bumpy_sig}
-        , "slow": {"grade": grade_bkg, "bumpiness": bumpy_bkg}}
+        ,"slow": {"grade": grade_bkg, "bumpiness": bumpy_bkg}}
 
     grade_sig = [X_test[ii][0] for ii in range(0, len(X_test)) if y_test[ii] == 0]
     bumpy_sig = [X_test[ii][1] for ii in range(0, len(X_test)) if y_test[ii] == 0]
