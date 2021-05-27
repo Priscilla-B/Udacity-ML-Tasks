@@ -49,3 +49,16 @@ for key in enron_data.keys():
     email_list.append(enron_data[key]['email_address'])
 print('number of people with a known email', len(email_list) - email_list.count('NaN'))
 
+# number of people with NaN as total payments
+payment_list = []
+for key in enron_data.keys():
+    payment_list.append(enron_data[key]['total_payments'])
+print('percentage of people with NaN total payments', payment_list.count('NaN')/len(payment_list))
+
+# percentage of POIs with NaN in their total payments
+poi_payment_list = []
+for key in enron_data.keys():
+    if enron_data[key]['poi']:
+        poi_payment_list.append(enron_data[key]['total_payments'])
+print('percentage of POIs with NaN total payments', poi_payment_list.count('NaN')/len(poi_payment_list))
+
