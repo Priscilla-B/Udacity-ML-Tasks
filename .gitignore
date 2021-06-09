@@ -5,6 +5,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+k_means/trial.py
 ../final_project/final_project_dataset_unix.pkl
 
 # C extensions
